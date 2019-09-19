@@ -76,7 +76,7 @@ class SpotifyWebAPI
             return str_replace($type, '', $id);
         }, (array) $uriIds);
 
-        return (count($uriIds) == 1) ? $uriIds[0] : $uriIds;
+        return (count($uriIds) == 1) ? reset($uriIds) : $uriIds;
     }
 
     /**
